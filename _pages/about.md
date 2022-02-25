@@ -2,23 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
 profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>215, AI Building</p>
+    <p>Gachon University, Seongnam</p>
+    <p>Republic of Korea</p>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am *Sayed Nadim* and I am a computer vision researcher with 3+ years of experience in generative image synthesis, stereo vision and bio-inspired sensors. My current research interests lie in modeling visual perception systems, bio-inspired camera sensors, and multi-sensors data fusion.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I have completed my master's from the Department of IT Convergence Engineering (2019-2021) from Gachon University, under the supervision of  [Prof. Yong Ju Jung](https://sites.google.com/site/coolyjjung/). I have completed my undergraduate studies from the Department of Electronics and Telecommunication Engineering from [University of Liberal Arts Bangladesh (ULAB)](https://ulab.edu.bd/) (2013-2017), under the supervision of [Dr. S. M. Mahbubur Rahman](https://eee.buet.ac.bd/faculty/details/dr-s-m-mahbubur-rahman).  I am currently working as a researcher in [CVIP Lab](https://sites.google.com/site/gachoncvip/home), Gachon University.
+
+
+Thank you for visiting my website. 
