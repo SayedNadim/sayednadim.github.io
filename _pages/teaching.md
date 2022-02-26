@@ -4,7 +4,7 @@ title: teaching
 permalink: /teaching/
 description: 
 nav: true
-display_categories: [Programming, Concept]
+display_categories: [Programming, Concept, Lab]
 horizontal: false
 ---
 
