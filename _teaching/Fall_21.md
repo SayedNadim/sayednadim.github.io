@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Computer Vision Assignment Homework
+title: Fall'21 - Computer Vision Assignment
 date: 2021-11-08 11:12:00-0400
 description: Assignment for computer vision course in fall'21
 tags: Undergrad
-categories: Colorization Homework
+categories: [Assignment]
 ---
 #### Details
 
@@ -28,4 +28,4 @@ For the colorization task, the inputs will be an L image and corresponding color
 #### Testing details
 The test images contains both L image and AB color hints, concatenated and converted into a RGB image. You can use the dataloader to extract L and AB channels, same as training dataloader. Please refer to the provided dataloader for this. $1000$ test images will be provided to the students. All test images will be resized to $$256\times256$$. However, you have to resize it into $128\times128$ and all output images should have the same dimension ($$128\times128$$). 
 #### Training Environment
-All student are expected to use Google Colab for the training purpose. The deep learning framework should be PyTorch. Note that, \textbf{the maximum time for training in Colab is 12 hours}.
+All student are expected to use Google Colab for the training purpose. The deep learning framework should be PyTorch. Note that, **the maximum time for training in Colab is 12 hours**.
