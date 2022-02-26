@@ -3,8 +3,7 @@ layout: post
 title: Fall'21 - Computer Vision Assignment
 date: 2021-11-08 11:12:00-0400
 description: Assignment for computer vision course in fall'21
-tags: Undergrad
-categories: [Assignment]
+
 ---
 #### Details
 
