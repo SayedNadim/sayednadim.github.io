@@ -5,7 +5,7 @@ permalink: /
 subtitle:
 
 profile:
-  align: left
+  align: right
   image: prof_pic.jpg
   address: >
     <p>215, AI Building,</p>
