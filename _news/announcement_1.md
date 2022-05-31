@@ -4,4 +4,4 @@ date: 2020-12-01 15:59:00-0400
 inline: true
 ---
 
-Our paper has been accepted for AAAI Conference on Artificial Intelligence (AAAI-21).
+[**Conference**] Our paper has been accepted for AAAI Conference on Artificial Intelligence (AAAI-21).
