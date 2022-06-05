@@ -111,6 +111,9 @@ collections:
   teaching:
     output: true
     permalink: /teaching/:path/
+  blog:
+    output: true
+    permalink: /posts/:path/
 
 news_limit: 10
 
