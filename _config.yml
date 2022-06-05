@@ -86,7 +86,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 blog_name: Whiteboard  # your blog must have a name for it to show up in the nav bar
 blog_nav_title: Whiteboard
 blog_description: A simple brainstorm place for me
-permalink: blog/:title/
+permalink: /blog/:title/
 
 # Pagination
 pagination:
