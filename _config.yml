@@ -84,8 +84,9 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # -----------------------------------------------------------------------------
 
 blog_name: Whiteboard  # your blog must have a name for it to show up in the nav bar
+blog_nav_title: blog
 blog_description: A simple brainstorm place for me
-permalink: posts/:year/:title/
+permalink: blog/:year/:title/
 
 # Pagination
 pagination:
@@ -111,9 +112,7 @@ collections:
   teaching:
     output: true
     permalink: /teaching/:path/
-  blog:
-    output: true
-    permalink: /posts/:path/
+
 
 news_limit: 10
 
