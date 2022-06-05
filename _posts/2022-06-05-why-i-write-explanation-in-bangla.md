@@ -2,7 +2,7 @@
 layout: post
 title:  কেন আমি বাংলায় রিসার্চ পেপারের ব্যাখ্যা লিখছি
 date:   2022-06-05 01:40:16
-description: march & april, looking forward to summer
+description: Why I write my explanation in bangla
 tags: introduction
 categories: unnecessary
 
