@@ -85,7 +85,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 blog_name: Whiteboard  # your blog must have a name for it to show up in the nav bar
 blog_nav_title: Whiteboard
-blog_description: Kuchisabishii [口寂しい, Japanese] - eating when you are not hungry but your mouth is lonely.
+blog_description: My simple explanation
 permalink: blog/:year/:title/
 
 # Pagination
