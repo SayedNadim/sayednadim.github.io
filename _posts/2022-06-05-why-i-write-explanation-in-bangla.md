@@ -50,6 +50,4 @@ They are not breathing in English. They are probably dead.
 
 
 ---
-Sincerely,
-
-[সৈয়দ নাদিম](sayednadim.github.io)
+### সৈয়দ নাদিম
