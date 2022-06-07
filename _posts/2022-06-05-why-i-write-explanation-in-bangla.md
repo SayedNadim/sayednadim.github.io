@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  কেন আমি বাংলায় রিসার্চ পেপারের ব্যাখ্যা লিখছি
+title:  কেন আমি বাংলায় ব্যাখ্যা লিখছি
 date:   2022-06-05 01:40:16
 description: Why I am writing my explanations in bangla
 tags: introduction
@@ -50,7 +50,7 @@ It's not a bug, it's a feature!  মাইল্লেফিরে !
 They are not breathing in English. They are probably dead.
 
 
-## কেন আমি বাংলায় রিসার্চ পেপারের ব্যাখ্যা লিখবো
+## কেন আমি বাংলায় ব্যাখ্যা লিখছি
 
 কারণ আমি চাই আমাদের যারা নতুন গবেষক হতে চায়, তারা যেন কন্সেপ্টগুলো নিজেদের ভাষায় বুঝতে পারে। রিসার্চ পেপার ইংরেজিতে হোক, আপত্তি নেই। ইংরেজিতেই বুঝতে হবে - এতে আপত্তি আছে।
 
