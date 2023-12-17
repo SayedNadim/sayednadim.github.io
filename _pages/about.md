@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_n.jpg
   address: >
     <p>3rd Floor, 24, Namdaemun-ro 9-gil</p>
     <p>Jung-gu, Seoul,</p>
