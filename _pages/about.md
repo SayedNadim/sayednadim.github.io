@@ -17,14 +17,29 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-
+Intro:
 Hi, I am Sayed Nadim.
 
-I am a computer vision researcher with experience in developing cutting-edge AI-based solutions for autonomous vehicles, leading a mid-size team (12+ developers) and concurrently working as an AI researcher. 
+Summary:
+I am a computer vision researcher with experience in developing cutting-edge AI-based solutions for autonomous vehicles, completing projects/PoCs/MVPs for clients and leading R&D projects.
 
-I have experience in designing traditional/deep learning methods for 2D & 3D image processing techniques, utilizing supervised/semi-supervised/unsupervised learning, working with different sensors (RGB pinhole/wideangle/Fisheye cameras, Monochrome cameras, NIR/LWIR cameras, Neuromorphic sensors, LiDAR, IMU, etc.), and deep generative models.
+Experience:
+I have experience in designing and implementing traditional and deep learning-based solutions for 2D & 3D image processing problems by utilizing supervised/semi-supervised/unsupervised learning techniques. 
 
-I am currently working as a team lead and AI researcher in DeltaX.ai. Prior to that, I was working as a vision researcher in CVIP Lab, Gachon University, Republic of Korea.
+I also have experience in working with different sensors (RGB pinhole/wideangle/Fisheye cameras, Monochrome cameras, NIR/LWIR cameras, Neuromorphic sensors, LiDAR, IMU, etc.). 
+
+I have experience in building teams, setting workflow and organizing/automating processes for AI development. 
+
+Job:
+As the group lead of "automotive perception group" in DeltaX.ai, I am leading a mid-size team (15+ developers) and concurrently working as an AI researcher. 
+
+Study:
+Concurrently, I am working as a PhD scholar in CVIP Lab, Gachon University, Republic of Korea.
+
+Current focus: SLAM
+Next focus: MLOps/DevOps
+
+
 
 
 
