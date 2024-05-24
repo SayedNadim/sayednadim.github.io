@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: prof_pic_n.jpg
+  image: prof_pic.jpg
   address: >
     <p>3rd Floor, 24, Namdaemun-ro 9-gil</p>
     <p>Jung-gu, Seoul,</p>
@@ -36,7 +36,7 @@ As the group lead of "automotive perception group" in DeltaX.ai, I am leading a 
 Study:
 Concurrently, I am working as a PhD scholar in CVIP Lab, Gachon University, Republic of Korea.
 
-Current focus: SLAM
+Current focus: SLAM, C++
 Next focus: MLOps/DevOps
 
 
