@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sayed Nadim | blog</title>
+    <title>Sayed Nadim | Fall'21 - Computer Vision Assignment</title>
     <meta name="author" content="S M Nadim  Uddin" />
-    <meta name="description" content="" />
+    <meta name="description" content="Assignment for computer vision course in fall'21" />
     <meta name="keywords" content="deep-learning, computer-vision, computer-vision-in-bangla, image-processing, image-processing-in-bangla, jekyll, jekyll-theme, academic-website, portfolio-website" />
 
 
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="/assets/img/nadim_avatar.jpg%EF%B8%8F"/>
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://sayednadim.github.io/blog/">
+    <link rel="canonical" href="https://sayednadim.github.io/teaching/Fall_21/">
     
     <!-- Dark Mode -->
     
@@ -71,8 +71,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/blog/">blog</a>
               </li>
 
               <!-- Other pages -->
@@ -81,8 +81,8 @@
               </li>
 
               <!-- Toogle theme mode -->
-              <div class = "toggle-container">
-                <a id = "light-toggle">
+              <div class="toggle-container">
+                <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
                 </a>
@@ -95,105 +95,55 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h1>Whiteboard</h1>
-    <h2>A simple brainstorm place for me</h2>
-  </div>
+<div class="post">
 
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/what-is-ann/">Artificial Neural Network (কৃত্রিম নিউরাল নেটওয়ার্ক) - জিনিসটা কী? -০১</a>
-        
-      </h3>
-      <p>এই ব্লগে আমরা কৃত্রিম নিউরাল নেটওয়ার্ক-এর বিষয়ে প্রাথমিক ধারণা নিব</p>
-      <p class="post-meta">
-        3 min read &nbsp; &middot; &nbsp;
-        June 5, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Fall'21 - Computer Vision Assignment</h1>
+    <p class="post-meta">November 8, 2021</p>
+    <p class="post-tags">
+      <a href="/blog/2021"> <i class="fas fa-calendar fa-sm"></i> 2021 </a>
+        ·  
+        <a href="/blog/tag/Undergrad">
+          <i class="fas fa-hashtag fa-sm"></i> Undergrad</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/কৃত্রিম">
-              <i class="fas fa-hashtag fa-sm"></i> কৃত্রিম</a> &nbsp;
-              
-            <a href="/blog/tag/নিউরাল">
-              <i class="fas fa-hashtag fa-sm"></i> নিউরাল</a> &nbsp;
-              
-            <a href="/blog/tag/নেটওয়ার্ক">
-              <i class="fas fa-hashtag fa-sm"></i> নেটওয়ার্ক</a> &nbsp;
-              
+        ·  
+        <a href="/blog/category/Lab">
+          <i class="fas fa-tag fa-sm"></i> Lab</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/কন্সেপ্ট">
-              <i class="fas fa-tag fa-sm"></i> কন্সেপ্ট</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <h4 id="details">Details</h4>
 
-    
-    
-    
-    
+<p>For this small homework, you will make a colorization model based on new/existing deep learning models, train the model using the provided train/validation dataset and test the model using test dataset.</p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/why-i-write-explanation-in-bangla/">কেন আমি বাংলায় ব্যাখ্যা লিখছি</a>
-        
-      </h3>
-      <p>Why I am writing my explanations in bangla</p>
-      <p class="post-meta">
-        4 min read &nbsp; &middot; &nbsp;
-        June 5, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p>Specifically, you need to perform the following:</p>
+<ul>
+  <li>You need to train the model, save checkpoints and perform validation.</li>
+  <li>You need to implement a test dataloader based on the validation dataloader.</li>
+  <li>You need to implement a ‘test’ method that will take a grayscale “L” image and “AB” color hints and produce a color image (same as validation method).</li>
+  <li>You need to test your trained model using the provided test images and save the images.</li>
+  <li>You need to write a short report on your methodology.</li>
+  <li>Make a zip file containing your codes and report in one folder and the result images in other folder.</li>
+</ul>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/introduction">
-              <i class="fas fa-hashtag fa-sm"></i> introduction</a> &nbsp;
-              
-          
+<p><em>Refer to the previous lab sessions (ipynb files) for pointers/help with test function.</em></p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/unnecessary">
-              <i class="fas fa-tag fa-sm"></i> unnecessary</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<h4 id="dataset">Dataset</h4>
+<p>For this homework, a dataset will be provided containing training, validation and testing images. The training folder consists of \(7000\) training images, the validation folder contains \(2000\) validation images and the test folder contains \(1000\) images. All images are randomly sampled from <a href="http://places2.csail.mit.edu/download.html" target="_blank" rel="noopener noreferrer">Places365</a> dataset. Images are resized to \(256\times256\). For training/validation/test, all images have to be resized to \(128\times128\).</p>
 
-    
-  </ul>
+<h4 id="training-details">Training details</h4>
+<p>For the colorization task, the inputs will be an L image and corresponding color hint map. <strong>A sample dataloader for PyTorch is already provided in the <a href="https://github.com/SayedNadim/TA_computer_vision/blob/main/Computer_Vision_Lab.ipynb" target="_blank" rel="noopener noreferrer">ipynb file</a></strong>. The dataloader handles both color space conversion and generation of hint images. In training time, the dataloader will produce L images from the ground truth images and also randomly sample color hints from the corresponding images. Note that the color hints will be generated by a random sampling in a ratio of \(1\% - 5\%\).</p>
+<h4 id="testing-details">Testing details</h4>
+<p>The test images contains both L image and AB color hints, concatenated and converted into a RGB image. You can use the dataloader to extract L and AB channels, same as training dataloader. Please refer to the provided dataloader for this. $1000$ test images will be provided to the students. All test images will be resized to \(256\times256\). However, you have to resize it into \(128\times128\) and all output images should have the same dimension (\(128\times128\)).</p>
+<h4 id="training-environment">Training Environment</h4>
+<p>All student are expected to use Google Colab for the training purpose. The deep learning framework should be PyTorch. Note that, <strong>the maximum time for training in Colab is 12 hours</strong>.</p>
 
-  
+  </article>
 
 </div>
 
@@ -202,7 +152,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2025 S M Nadim  Uddin. 
+        © Copyright 2025 S M Nadim  Uddin. 
       </div>
     </footer>
 
