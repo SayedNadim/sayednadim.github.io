@@ -1,3 +1,3 @@
 git add .
-git commit -m "update - auto"
+git commit -m "update - auto fix"
 git push
