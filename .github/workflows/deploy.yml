@@ -34,12 +34,12 @@ jobs:
         gem update bundler
         bundle config set --local deployment false
         bundle install
-    - name: Install deps
-      run: |
-        gem install bundler
-        bundle config path vendor/bundle
-        bundle install --jobs 4 --retry 3
-        npm install -g mermaid.cli
+    # - name: Install deps
+    #   run: |
+    #     gem install bundler
+    #     bundle config path vendor/bundle
+    #     bundle install --jobs 4 --retry 3
+    #     npm install -g mermaid.cli
     - name: Setup deploy options
       id: setup
       run: |
