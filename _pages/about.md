@@ -17,27 +17,43 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Intro:
-Hi, I am Sayed Nadim.
 
-Summary:
-I am a computer vision researcher with experience in developing cutting-edge AI-based solutions for autonomous vehicles, completing projects/PoCs/MVPs for clients and leading R&D projects.
+**Intro**
+Hi, I am Sayed Nadim, an AI researcher. I build perception systems that actually work. My focus is engineering AI systems that don’t collapse under real-world pressure.
 
-Experience:
-I have experience in designing and implementing traditional and deep learning-based solutions for 2D & 3D image processing problems by utilizing supervised/semi-supervised/unsupervised learning techniques. 
+**Summary**
+Computer vision expert with a focus on practical, high-impact AI for autonomous systems. I work in R\&D, deliver PoCs/MVPs that don’t just demo well but scale, and design solutions grounded in real sensor data and system constraints.
 
-I also have experience in working with different sensors (RGB pinhole/wideangle/Fisheye cameras, Monochrome cameras, NIR/LWIR cameras, Neuromorphic sensors, LiDAR, IMU, etc.). 
+**Experience**
+I work across the spectrum of 2D/3D perception: from classical CV to deep learning, using supervised, semi-, and unsupervised methods — chosen based on what *actually* works, not what's fashionable. I’ve designed full-stack perception systems for autonomy, from algorithm design to deployment.
 
-I have experience in building teams, setting workflow and organizing/automating processes for AI development. 
+I have experience in working with different sensors:
 
-Job:
-As the group lead of "automotive perception group" in DeltaX.ai, I am leading a mid-size team (15+ developers) and concurrently working as an AI researcher. 
+* RGB (pinhole, fisheye, wide-angle)
+* Mono, NIR, LWIR
+* Neuromorphic/event cameras
+* LiDAR, IMU, multi-sensor fusion
 
-Study:
-Concurrently, I am working as a PhD scholar in CVIP Lab, Gachon University, Republic of Korea.
 
-Current focus: SLAM, C++
-Next focus: MLOps/DevOps
+
+**Current Role**
+- Senior AI/ML Researcher, AI Part, Future Technology Research Institute, Deep In Sight, Korea.
+- Working on ICMS, optimization and pipeline building.
+
+**Previous Role**
+- Group Lead, Automotive Perception — DeltaX.ai
+- Led a team of 15+ engineers, building perception stacks for autonomous vehicles. Simultaneously pushing forward core research in AI-driven perception.
+
+**Academic**
+- I have completed my master's from the Department of IT Convergence Engineering (2019-2021) from Gachon University, under the supervision of  Prof. Yong Ju Jung. 
+  - Applied research in depth, generative vision solutions, low-level vision, and sensor calibration.
+- I have completed my undergraduate studies from the Department of Electronics and Telecommunication Engineering from University of Liberal Arts Bangladesh (2013-2017), under the supervision of Dr. S. M. Mahbubur Rahman.
+
+**Focus**
+- **Now**: Classical CV-based methods, Optimization, Visual SLAM, C++, sensor fusion
+- **Next**: MLOps/DevOps, LLMs and VLMs.
+
+---
 
 
 
