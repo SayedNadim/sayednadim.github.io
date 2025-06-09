@@ -17,44 +17,40 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Intro
---
-Hi, I am Sayed Nadim. I am a Computer vision researcher with a focus on practical, high-impact AI for autonomous systems. I work in R\&D and deliver PoCs/MVPs/design solutions grounded in real sensor data and system constraints. My focus is engineering AI systems that don’t collapse under real-world pressure.
-
-Expertise
+### Hi there 👋
 ---
-I work across the spectrum of 2D/3D perception: from classical CV to deep learning, using supervised, semi-, and unsupervised methods — chosen based on what *actually* works, not what's fashionable. I’ve designed full-stack perception systems for autonomy, from algorithm design to deployment.
+I am Sayed Nadim.
 
-I have experience in working with different sensors:
+I am originally from Bangladesh 🇧🇩 and currently working as a researcher in South Korea. Thank you for visiting my profile! Feel free to reach out if you want to collaborate or just have a chat. 😊
 
-* RGB (pinhole, fisheye, wide-angle)
-* Mono, NIR, LWIR
-* Neuromorphic/event cameras
-* LiDAR, IMU, multi-sensor fusion
+## 🌱 What Do I Do
+- 💂‍♂️ I am a computer vision researcher with experience in developing cutting-edge AI-based solutions and a passionate developer who loves to explore new technologies and build innovative projects.
+- 🏗️ I have 6+ years of experience in designing traditional/deep learning methods for 2D \& 3D image processing techniques, utilizing supervised/semi-supervised/unsupervised learning, working with different sensors (RGB pinhole/wideangle/Fisheye cameras, Monochrome cameras, NIR/LWIR cameras, Neuromorphic sensors, LiDAR, IMU, etc.), and deep generative vision models.
 
 
-Professional Affiliations
----
-**Current Role**
-- Senior AI/ML Researcher, AI Part, Future Technology Research Institute, Deep In Sight, Korea.
-- Working on ICMS, optimization and pipeline building.
+## 🌱 What I'm Working On
+- 🔭 I’m currently working on in-cabin algorithms and monocular depth estimation.
+- 🤔: I'm also trying to find a way to have a better convolution mechanism (this is above my current knowledge but I am digging deeper)
+- 💻: I usually work with PyTorch with some C++.  
 
-**Previous Role**
-- Group Lead, Automotive Perception — DeltaX.ai
-- Led a team of 15+ engineers, building perception stacks for autonomous vehicles. Simultaneously pushing forward core research in AI-driven perception.
+## 👯 Looking to Collaborate On
+- Open source projects that make a difference.
+- Innovative ideas that can solve real-world problems.
 
-Education
----
+
+## 🌱 Education
 **Academic**
 - I have completed my master's from the Department of IT Convergence Engineering (2019-2021) from Gachon University, under the supervision of  Prof. Yong Ju Jung. 
   - Applied research in depth, generative vision solutions, low-level vision, and sensor calibration.
 - I have completed my undergraduate studies from the Department of Electronics and Telecommunication Engineering from University of Liberal Arts Bangladesh (2013-2017), under the supervision of Dr. S. M. Mahbubur Rahman.
 
-**Focus**
-- **Now**: Classical CV-based methods, Optimization, Visual SLAM, C++, sensor fusion
-- **Next**: MLOps/DevOps, LLMs and VLMs.
 
 ---
 
+## 📫 How to Reach Me
+- **Email**: smnadimuddin(at) gmail (dot) com
+- **LinkedIn**: [SayedNadim](https://linkedin.com/in/smnadimuddin)
+
+---
 
 Thank you for visiting my website. 
