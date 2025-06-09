@@ -57,7 +57,6 @@
 #                     --src ${{ steps.setup.outputs.SRC_BRANCH }} 
 #                     --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
 
-
 name: Deploy
 
 on:
@@ -80,17 +79,20 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0.2'
-        bundler-cache: false  # Disable cache to avoid conflicts
+        ruby-version: '3.1.4'  # Use newer Ruby version
+        bundler-cache: false
     
-    - name: Clean Bundle Setup
+    - name: Clean Bundle Install
       run: |
+        # Use latest bundler with newer Ruby
         gem update bundler
         bundle config set --local deployment false
         bundle config set --local path vendor/bundle
-        bundle clean --force || true
+        
+        # Clean install
+        rm -rf vendor/bundle .bundle
         rm -f Gemfile.lock
-        bundle install
+        bundle install --verbose
     
     - name: Setup deploy options
       id: setup
