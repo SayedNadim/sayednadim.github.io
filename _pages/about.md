@@ -8,9 +8,9 @@ profile:
   align: right
   image: prof_pic_n.jpg
   address: >
-    <p>3rd Floor, 24, Namdaemun-ro 9-gil</p>
-    <p>Jung-gu, Seoul,</p>
-    <p>Republic of Korea</p>
+    <p>Room 404, U-Space 2, A-dong, </p>
+    <p>670 Daewang Pangyo-ro, Bundang-gu, </p>
+    <p>Seongnam-si, Gyeonggi-do, South Korea. </p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
