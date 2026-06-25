@@ -35,7 +35,7 @@ export const nav = [
 
 export const stats = [
   { n: "13+", l: "publications" },
-  { n: "4×", l: "Q1 journals" },
-  { n: "6×", l: "CVPR / ICCV / ECCV top-10" },
-  { n: "6yr", l: "research + industry" },
+  { n: "4", l: "q1_journals" },
+  { n: "6", l: "challenge_top10" },
+  { n: "6yr", l: "experience" },
 ];

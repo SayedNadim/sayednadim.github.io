@@ -127,11 +127,15 @@ header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--
 /* ---- hero layout ---- */
 .heroT{display:grid;grid-template-columns:1.25fr .75fr;gap:1.4rem;align-items:start;padding:2.4rem 0 2.6rem}
 
-/* ---- ticker ---- */
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);font-family:"Space Mono",monospace;font-size:.78rem;color:var(--muted)}
-.ticker .in{display:flex;flex-wrap:wrap;gap:1.4rem;padding:.7rem 0}
-.ticker b{color:var(--ink)}
-.ticker .acc{color:var(--acc)}
+/* ---- stats ticker: terminal output strip ---- */
+.ticker{background:var(--sysbar);font-family:"Space Mono",monospace;font-size:.78rem;color:#cbc7bd}
+.ticker .in{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.2rem;padding:.62rem 0}
+.ticker .tprompt{color:#b9b5aa}
+.ticker .tprompt .ar{color:var(--acc)}
+.ticker .tprompt .tcmd{color:var(--acc2)}
+.ticker .tk{color:#a8a399}
+.ticker .tk b{color:#fff;font-weight:700}
+.ticker .tcomment{color:#6f6b61;margin-left:auto}
 
 /* ---- sections ---- */
 section.block{padding:3.2rem 0;border-top:1px solid var(--line)}

@@ -41,8 +41,9 @@ const selected = publications.filter((p) => p.selected);
   </main>
 
   <div class="ticker"><div class="wrap in mono">
-    {stats.map((s) => (<span><b>{s.n}</b> {s.l}</span>))}
-    <span class="hidem">// PyTorch · C++ · depth · 3D · restoration</span>
+    <span class="tprompt"><span class="ar">&#10140;</span> ~ <span class="tcmd">stats</span> --summary</span>
+    {stats.map((s) => (<span class="tk">{s.l}=<b>{s.n}</b></span>))}
+    <span class="tcomment hidem"># pytorch · c++ · depth · 3d · restoration</span>
   </div></div>
 
   <main class="wrap">
