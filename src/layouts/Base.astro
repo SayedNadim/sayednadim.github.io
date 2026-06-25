@@ -1,0 +1,105 @@
+---
+import "../styles/global.css";
+import { site, socials, nav } from "../data/site";
+
+interface Props { title?: string; description?: string; }
+const { title, description } = Astro.props;
+const pageTitle = title ? `${site.name} // ${title}` : `${site.name} // Computer Vision Researcher`;
+const desc = description ?? site.blurb;
+const path = Astro.url.pathname;
+const ogImage = new URL(site.photo, site.url).href;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  alternateName: "Sayed Nadim",
+  jobTitle: site.role,
+  worksFor: { "@type": "Organization", name: site.org },
+  url: site.url,
+  email: `mailto:${site.email}`,
+  image: ogImage,
+  sameAs: Object.values(socials),
+};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script is:inline>
+    (function () { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23e11d2a%22/><rect x=%2210%22 y=%2210%22 width=%2212%22 height=%2212%22 rx=%222%22 fill=%22white%22/></svg>" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={desc} />
+  <meta name="author" content={site.name} />
+  <link rel="canonical" href={new URL(path, site.url).href} />
+  <meta name="keywords" content="Sayed Nadim, S M Nadim Uddin, computer vision, deep learning, depth estimation, image inpainting, image restoration, ADAS, in-cabin perception, PyTorch" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={new URL(path, site.url).href} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={desc} />
+  <meta name="twitter:image" content={ogImage} />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet" />
+  <slot name="head" />
+</head>
+<body>
+  <div class="sysbar"><div class="wrap in mono">
+    <span>nadim@vision: ~ &nbsp; <span class="acc">&#9679;</span> shell: zsh</span>
+    <span class="hidem">{site.location} &nbsp;//&nbsp; <span id="clk">00:00:00</span><span class="blink">_</span></span>
+  </div></div>
+
+  <header class="site"><div class="wrap nav">
+    <a class="brand" href="/"><span class="rec"></span> ~/{site.handle}</a>
+    <nav>
+      {nav.map((n) => (
+        <a href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</a>
+      ))}
+      <a class="navcv btn sm" href={site.cv} target="_blank" rel="noopener">cv.pdf</a>
+      <button id="themeToggle" class="tt" type="button" aria-label="Toggle theme" title="Toggle light / dark">[dark]</button>
+    </nav>
+  </div></header>
+
+  <slot />
+
+  <footer class="site"><div class="wrap fbar">
+    <span>© {new Date().getFullYear()} {site.handle} // seoul.kr</span>
+    <span>
+      <a href={socials.scholar} target="_blank" rel="noopener">scholar</a> &nbsp;
+      <a href={socials.github} target="_blank" rel="noopener">github</a> &nbsp;
+      <a href={socials.linkedin} target="_blank" rel="noopener">linkedin</a> &nbsp;
+      <a href={socials.orcid} target="_blank" rel="noopener">orcid</a>
+    </span>
+  </div></footer>
+
+  <script is:inline>
+    // live clock
+    function clk(){ var e=document.getElementById('clk'); if(e) e.textContent=new Date().toTimeString().slice(0,8); }
+    clk(); setInterval(clk,1000);
+    // reveal on scroll
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    // theme toggle
+    var tt=document.getElementById('themeToggle');
+    function syncTT(){ var dark=document.documentElement.getAttribute('data-theme')==='dark'; if(tt) tt.textContent=dark?'[light]':'[dark]'; }
+    syncTT();
+    if(tt) tt.addEventListener('click',function(){
+      var dark=document.documentElement.getAttribute('data-theme')==='dark';
+      if(dark){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}
+      else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
+      syncTT();
+    });
+  </script>
+</body>
+</html>

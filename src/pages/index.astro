@@ -1,0 +1,150 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, socials, stats } from "../data/site";
+import { focus, experience, projects, publications } from "../data/content";
+
+const featured = projects.filter((p) => p.featured).slice(0, 6);
+const selected = publications.filter((p) => p.selected);
+---
+<Base>
+  <main class="wrap">
+    <!-- HERO: terminal session + camera feed -->
+    <section class="heroT">
+      <div class="term">
+        <div class="termbar"><span class="dots"><i></i><i></i><i></i></span><span class="title">{site.handle}@vision: ~/portfolio · zsh</span></div>
+        <div class="termbody" id="tb" style="min-height:330px"></div>
+      </div>
+
+      <div class="term feed">
+        <div class="termbar"><span class="dots"><i></i><i></i><i></i></span><span class="title">cam0 · live feed</span></div>
+        <div class="viewport">
+          <img src={site.photo} alt={site.name} width="768" height="980" />
+          <div class="vpgrid"></div>
+          <div class="scan"></div>
+          <!-- detection overlays placed on the real face -->
+          <div class="bbox d1" style="left:8%;top:9%;width:64%;height:87%;border-style:dashed;border-color:#fff;mix-blend-mode:difference">
+            <span class="lab" style="background:#fff;color:#111;mix-blend-mode:normal">person · 0.982</span>
+          </div>
+          <div class="bbox d2" style="left:31%;top:13%;width:31%;height:25%"><span class="lab">face · 0.961</span></div>
+          <span class="tag t1">REC &#9679;</span>
+          <span class="tag" style="top:8px;left:8px">track_id 07</span>
+          <!-- prominent depth readout -->
+          <div class="depth">
+            <span class="dl">DEPTH</span>
+            <span class="dv">1.37<span class="du">m</span></span>
+            <span class="dbar"><i style="height:57%"></i></span>
+          </div>
+        </div>
+        <div class="feedbar"><span>iou 0.91</span><span>lat 14ms</span><span class="acc">DETECT: ON</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="ticker"><div class="wrap in mono">
+    {stats.map((s) => (<span><b>{s.n}</b> {s.l}</span>))}
+    <span class="hidem">// PyTorch · C++ · depth · 3D · restoration</span>
+  </div></div>
+
+  <main class="wrap">
+    <!-- ABOUT / CAPABILITIES -->
+    <section class="block" id="about">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat 01_capabilities.txt</span></div>
+      <h2 class="stitle g">What I work on</h2>
+      <p class="lead">I'm a computer vision researcher from Bangladesh, based in South Korea. My work spans traditional and deep-learning methods for 2D and 3D image processing, generative modeling and multi-sensor fusion. These days I focus on driver monitoring and in-cabin perception for production automotive systems.</p>
+      <div class="caps">
+        {focus.map((f) => (
+          <div class="cap reveal"><div class="id">[{f.id}]</div><h3>{f.title}</h3><p>{f.desc}</p></div>
+        ))}
+      </div>
+    </section>
+
+    <!-- SELECTED RESEARCH -->
+    <section class="block" id="research">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls -l research/selected</span></div>
+      <h2 class="stitle g">Selected research</h2>
+      <div class="reveal">
+        {selected.map((p) => (
+          <div class="r">
+            <div class="rt">{p.title}{p.award && <span class="star">{p.award}</span>}</div>
+            <span class="rv">{p.tag} {p.year}</span>
+            <div class="rm">{p.venue}{p.q1 ? " · Q1" : ""}{p.rank ? ` · ${p.rank}` : ""} · <Fragment set:html={p.authors} /></div>
+          </div>
+        ))}
+        <div class="more"><a href="/publications">&#10140; ls all_publications →</a></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block" id="experience">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">git log --experience</span></div>
+      <h2 class="stitle g">Where I've worked</h2>
+      <div class="reveal">
+        {experience.slice(0, 3).map((x) => (
+          <div class="x">
+            <div class="yr">{x.years}</div>
+            <div>
+              <div class="role">{x.role}</div>
+              <div class="org">{x.org} · {x.place}</div>
+              <div class="desc">{x.desc}</div>
+            </div>
+          </div>
+        ))}
+        <div class="more"><a href="/cv">&#10140; cat full_cv →</a></div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="block" id="work">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls projects/featured</span></div>
+      <h2 class="stitle g">Things I've built</h2>
+      <div class="pg reveal">
+        {featured.map((p) => (
+          <div class="pc">
+            <div class="top"><h3>{p.title}</h3><span class="y">{p.years}</span></div>
+            <div class="partner">{p.partner}</div>
+            <p>{p.desc}</p>
+            <div class="tags">{p.tags.map((t) => (<span class="t">{t}</span>))}</div>
+          </div>
+        ))}
+      </div>
+      <div class="more"><a href="/work">&#10140; ls all_projects →</a></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block contact">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">./contact.sh</span></div>
+      <h2 class="g">Let's build something that <a href={`mailto:${site.email}`}>sees.</a></h2>
+      <p>Open to research collaborations and hard perception problems. The fastest way to reach me is email.</p>
+      <a class="btn" href={`mailto:${site.email}`}>Say hello →</a>
+    </section>
+  </main>
+
+  <script is:inline define:vars={{ name: site.name, role: site.role, org: site.org, bio: site.tagline, cv: site.cv, email: site.email }}>
+    const tb = document.getElementById('tb');
+    const P = '<span class="pr">&#10140; <span class="path">~/portfolio</span></span> ';
+    const seq = [
+      { c: 'whoami', o: '<span class="hl">' + name + '</span> · ' + role + ' @ ' + org },
+      { c: 'cat bio.txt', o: 'I teach machines to <span class="hl">see</span>. ' + bio },
+      { c: 'ls focus/', o: 'depth_3d/   generative/   in_cabin/   adas/' },
+      { c: './contact.sh', o: 'BTNS' },
+    ];
+    let html = '';
+    function typeCmd(idx) {
+      if (idx >= seq.length) { tb.innerHTML = html + P + '<span class="curb"></span>'; return; }
+      const s = seq[idx]; let j = 0;
+      (function t() {
+        tb.innerHTML = html + P + '<span class="cmd">' + s.c.slice(0, j) + '</span><span class="curb"></span>';
+        if (j < s.c.length) { j++; setTimeout(t, 30); }
+        else {
+          const out = s.o === 'BTNS'
+            ? '<div class="out termbtns"><a class="btn sm" href="' + cv + '" target="_blank" rel="noopener">Download CV ↓</a><a class="btn sm ghost" href="mailto:' + email + '">Email</a></div>'
+            : '<div class="out">' + s.o + '</div>';
+          html += '<p class="ln1">' + P + '<span class="cmd">' + s.c + '</span></p>' + out;
+          tb.innerHTML = html + P + '<span class="curb"></span>';
+          setTimeout(function () { typeCmd(idx + 1); }, 380);
+        }
+      })();
+    }
+    setTimeout(function () { typeCmd(0); }, 400);
+  </script>
+</Base>

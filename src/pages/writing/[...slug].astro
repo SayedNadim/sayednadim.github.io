@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const fmt = (d: Date) => d.toISOString().slice(0, 10).replace(/-/g, ".");
+const tags = Array.isArray(post.data.tags) ? post.data.tags : post.data.tags ? [post.data.tags] : [];
+---
+<Base title="writing" description={post.data.description ?? post.data.title}>
+  <main class="wrap">
+    <div class="phead">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat writing/{post.id}.md</span></div>
+      <h1 class="g bangla" style="font-size:clamp(1.7rem,4vw,2.4rem)">{post.data.title}</h1>
+      <p class="mono" style="font-size:.8rem;color:var(--faint)">
+        {fmt(post.data.date)}{tags.map((t) => (<span> · {t}</span>))}
+      </p>
+    </div>
+
+    <article class="post bangla reveal">
+      <Content />
+    </article>
+
+    <p class="note"><a class="acc" href="/writing">&#10140; cd ../writing</a></p>
+  </main>
+</Base>

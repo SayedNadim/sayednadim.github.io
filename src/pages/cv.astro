@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+import { experience, education, skills, awards, publications } from "../data/content";
+---
+<Base title="cv" description="Curriculum vitae of S M Nadim Uddin, Senior AI/ML Researcher in computer vision.">
+  <main class="wrap">
+    <div class="phead">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat curriculum_vitae.md</span></div>
+      <h1 class="g">Curriculum Vitae</h1>
+      <p>{site.role} at {site.org}, {site.location}. M.Sc. in IT Convergence Engineering. Computer vision researcher across depth, 3D, restoration and automotive perception.</p>
+      <div class="termbtns" style="margin-top:1rem">
+        <a class="btn" href={site.cv} target="_blank" rel="noopener">Download PDF ↓</a>
+        <a class="btn ghost" href={`mailto:${site.email}`}>Email</a>
+      </div>
+    </div>
+
+    <section class="block" style="border-top:none">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">git log --experience</span></div>
+      <h2 class="stitle g">Experience</h2>
+      <div class="reveal">
+        {experience.map((x) => (
+          <div class="x">
+            <div class="yr">{x.years}</div>
+            <div>
+              <div class="role">{x.role}</div>
+              <div class="org">{x.org} · {x.place}</div>
+              <div class="desc">{x.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat education.txt</span></div>
+      <h2 class="stitle g">Education</h2>
+      <div class="reveal">
+        {education.map((e) => (
+          <div class="x">
+            <div class="yr">{e.years}</div>
+            <div>
+              <div class="role">{e.degree}, {e.field}</div>
+              <div class="org">{e.school} · GPA {e.gpa}</div>
+              <div class="desc"><span class="acc mono" style="font-size:.8rem">thesis:</span> {e.thesis}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat skills.json</span></div>
+      <h2 class="stitle g">Skills</h2>
+      <div class="skills reveal">
+        {skills.map((s) => (
+          <Fragment>
+            <div class="k">{s.k}</div>
+            <div class="v">{s.v.map((i) => (<span class="sp">{i}</span>))}</div>
+          </Fragment>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat awards.txt</span></div>
+      <h2 class="stitle g">Awards &amp; honors</h2>
+      <ul class="awards reveal">
+        {awards.map((a) => (
+          <li><span class="at"><Fragment set:html={a.text} /></span><span class="ay">{a.year}</span></li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls publications/ | head</span></div>
+      <h2 class="stitle g">Selected publications</h2>
+      <div class="reveal">
+        {publications.filter((p) => p.selected || p.q1).slice(0, 6).map((p) => (
+          <div class="r">
+            <div class="rt">{p.links && p.links[0] ? <a href={p.links[0].href} target="_blank" rel="noopener">{p.title}</a> : p.title}{p.award && <span class="star">{p.award}</span>}</div>
+            <span class="rv">{p.tag} {p.year}</span>
+            <div class="rm">{p.venue}{p.q1 ? " · Q1" : ""}</div>
+          </div>
+        ))}
+        <div class="more"><a href="/publications">&#10140; all publications →</a></div>
+      </div>
+    </section>
+  </main>
+</Base>

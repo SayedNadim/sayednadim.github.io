@@ -1,11 +1,18 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# misc
+.DS_Store
+*.log
+.env
+.env.production
+
+# legacy jekyll (kept ignored during transition)
 _site
-.bundle
-.sass-cache
 .jekyll-cache
 .jekyll-metadata
-.DS_store
-.ruby-version
-.tweet-cache
-Gemfile.lock
 vendor
-

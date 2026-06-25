@@ -1,0 +1,45 @@
+---
+import Base from "../layouts/Base.astro";
+import { projects, pocs } from "../data/content";
+---
+<Base title="work" description="Applied and industrial computer-vision R&D by S M Nadim Uddin with partners including Hyundai Mobis, KIA, SK hynix, 42dot, ETRI and Deep In Sight.">
+  <main class="wrap">
+    <div class="phead">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls -l projects/</span></div>
+      <h1 class="g">Selected work</h1>
+      <p>Applied and industrial R&amp;D delivered with partners including Hyundai Mobis, KIA, SK hynix, 42dot, ETRI, Korea Railway Research Institute and Deep In Sight.</p>
+    </div>
+
+    <section class="block" style="border-top:none">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat industrial_projects.txt</span></div>
+      <h2 class="stitle g">Industrial projects</h2>
+      <div class="pg reveal">
+        {projects.map((p) => (
+          <div class="pc">
+            <div class="top"><h3>{p.title}</h3><span class="y">{p.years}</span></div>
+            <div class="partner">{p.partner}</div>
+            <p>{p.desc}</p>
+            <div class="tags">{p.tags.map((t) => (<span class="t">{t}</span>))}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">cat proof_of_concepts.txt</span></div>
+      <h2 class="stitle g">Proof of concepts</h2>
+      <div class="reveal">
+        {pocs.map((p) => (
+          <div class="r">
+            <div class="rt">{p.title}</div>
+            <span class="rv">{p.years}</span>
+            <div class="rm">{p.partner}</div>
+            <div class="rlinks">{p.tags.map((t) => (<a>{t}</a>))}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <p class="note">// <a class="acc" href="/cv">full cv ↗</a></p>
+  </main>
+</Base>

@@ -1,0 +1,30 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const fmt = (d: Date) => d.toISOString().slice(0, 10).replace(/-/g, ".");
+---
+<Base title="writing" description="Notes and deep-learning explanations by S M Nadim Uddin, written in Bangla to make research more accessible.">
+  <main class="wrap">
+    <div class="phead">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls writing/</span></div>
+      <h1 class="g">Writing</h1>
+      <p>Notes and deep-learning explanations, written in Bangla to make research a little more accessible.</p>
+    </div>
+
+    <section class="block" style="border-top:none">
+      <div class="reveal">
+        {posts.map((p) => (
+          <a class="r" href={`/writing/${p.id}`} style="text-decoration:none">
+            <div class="rt bangla">{p.data.title}</div>
+            <span class="rv">{fmt(p.data.date)}</span>
+            {p.data.description && <div class="rm bangla">{p.data.description}</div>}
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import { publications } from "../data/content";
+
+const years = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a);
+const jCount = publications.filter((p) => p.type === "journal").length;
+const cCount = publications.filter((p) => p.type === "conference").length;
+---
+<Base title="publications" description="Peer-reviewed publications by S M Nadim Uddin in computer vision: depth estimation, image inpainting, restoration and vision challenges.">
+  <main class="wrap">
+    <div class="phead">
+      <div class="slab"><span class="pr">&#10140; ~</span> <span class="fn">ls -lR publications/</span></div>
+      <h1 class="g">Publications</h1>
+      <p>{jCount} journal and {cCount} conference / workshop papers, in reverse chronological order. Four Q1 journals; work at AAAI, CVPR, ICCV and ECCV.</p>
+    </div>
+
+    {years.map((y) => (
+      <section class="reveal">
+        <div class="yearhead">{y}</div>
+        {publications.filter((p) => p.year === y).map((p) => (
+          <div class="r">
+            <div class="rt">
+              {p.links && p.links[0] ? <a href={p.links[0].href} target="_blank" rel="noopener">{p.title}</a> : p.title}
+              {p.award && <span class="star">{p.award}</span>}
+            </div>
+            <span class="rv">{p.tag}</span>
+            <div class="rm">
+              <Fragment set:html={p.authors} /> · {p.venue}{p.q1 ? " · Q1" : ""}{p.rank ? ` · ${p.rank}` : ""}
+            </div>
+            {p.links && (
+              <div class="rlinks">
+                {p.links.map((l) => (<a href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>))}
+              </div>
+            )}
+          </div>
+        ))}
+      </section>
+    ))}
+
+    <p class="note">// generated from bibliography · <a class="acc" href="/cv">full cv ↗</a></p>
+  </main>
+</Base>
